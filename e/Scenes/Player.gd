@@ -1,16 +1,14 @@
 extends KinematicBody2D
 
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
-
-# Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+	set_process(true)
 	pass
+
+
+func _process(delta):
+	#Mouse Track
+	var motion = (get_global_mouse_position().x - global_position.x) * 0.2
+	translate(Vector2(motion, 0))
+	pass
+#pito
