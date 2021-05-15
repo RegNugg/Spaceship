@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/enemy_kamikaze.png-f18d6a5f95bcb3b731c4d541d580d20e.stex"
+path="res://.import/laser_enemy.png-996a6ef4150249c77bf9cb11226a4a77.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Enemy/enemy_kamikaze.png"
-dest_files=[ "res://.import/enemy_kamikaze.png-f18d6a5f95bcb3b731c4d541d580d20e.stex" ]
+source_file="res://Sprites/laser_enemy.png"
+dest_files=[ "res://.import/laser_enemy.png-996a6ef4150249c77bf9cb11226a4a77.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
@@ -31,4 +31,4 @@ process/invert_color=false
 stream=false
 size_limit=0
 detect_3d=true
-svg/scale=1.5
+svg/scale=1.0

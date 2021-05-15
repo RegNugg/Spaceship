@@ -1,8 +1,38 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/FarStars.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/KamikazeXD.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/EnemyShooter.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scripts/EnemySpawner.gd" type="Script" id=5]
+[ext_resource path="res://Scenes/Flare.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/Laser.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Stages/Camera2D.gd" type="Script" id=8]
+[ext_resource path="res://Scenes/Laser_ship.tscn" type="PackedScene" id=9]
 
 [node name="Node2D" type="Node2D"]
 
+[node name="Laser_ship" parent="." instance=ExtResource( 9 )]
+
+[node name="Stars" parent="." instance=ExtResource( 2 )]
+
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 0, 0 )
+position = Vector2( 86, 600 )
+
+[node name="Kamikaze" parent="." instance=ExtResource( 3 )]
+
+[node name="EnemyShooter" parent="." instance=ExtResource( 4 )]
+
+[node name="EnemySpawner" type="Node" parent="."]
+script = ExtResource( 5 )
+
+[node name="Container" type="Node" parent="EnemySpawner"]
+
+[node name="Flare" parent="." instance=ExtResource( 6 )]
+
+[node name="Laser" parent="." instance=ExtResource( 7 )]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+current = true
+script = ExtResource( 8 )
