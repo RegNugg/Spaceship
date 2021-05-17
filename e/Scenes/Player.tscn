@@ -73,5 +73,9 @@ position = Vector2( 10.3943, -11.1356 )
 [node name="ShootTimer" type="Timer" parent="."]
 wait_time = 0.25
 autostart = true
+
+[node name="HitTimer" type="Timer" parent="."]
+one_shot = true
 [connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]
 [connection signal="timeout" from="ShootTimer" to="." method="_on_ShootTimer_timeout"]
+[connection signal="timeout" from="HitTimer" to="." method="_on_HitTimer_timeout"]

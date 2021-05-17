@@ -22,6 +22,4 @@ func spawn():
 		get_node("Container").add_child(enemy)
 		yield(get_tree().create_timer(rand_range(0.5, 1.25)), "timeout") 
 	pass
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+
