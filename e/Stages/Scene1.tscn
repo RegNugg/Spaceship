@@ -17,7 +17,7 @@
 [node name="Stars" parent="." instance=ExtResource( 2 )]
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 86, 600 )
+position = Vector2( 200, 900 )
 
 [node name="Kamikaze" parent="." instance=ExtResource( 3 )]
 

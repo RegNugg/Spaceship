@@ -8,9 +8,10 @@ func _ready():
 
 func _process(delta):
 	
-	if shaking == true:
+	if shaking:
 		shake()
-	if shaking == false:
+		shaking = false
+	else:
 		offset = Vector2(0,0)
 	
 	pass

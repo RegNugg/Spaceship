@@ -10,6 +10,6 @@ func _process(delta):
 	
 	translate(vel * delta)
 	
-	if position.y >= get_viewport_rect().size.y + 180:
-		position = Vector2(0, -560)
+	if position.y >= get_viewport_rect().size.y + 1080:
+		position = Vector2(0, -1080)
 	pass

@@ -24,6 +24,7 @@ func _process(delta):
 	
 	if Armor <= 0:
 		can_shoot = false
+		Global.Camera.shaking = true
 	
 	
 	pass
@@ -47,10 +48,10 @@ func shoot():
 
 func set_armor(new_armor):
 	Armor = new_armor
-	if Armor == 0:
-		if Global.Camera.shaking == false:
-			Global.Camera.shaking = true
+	Global.Camera.shaking = true
+	if Armor <= 0:
 		$AnimatedSprite.play("Death")
+		
 	
 	pass
 func _on_ShootTimer_timeout():

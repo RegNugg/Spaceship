@@ -16,8 +16,9 @@ func _process(delta):
 	if position.x >= Utils.view_size.x - 16:
 		vel.x = -abs(vel.x)
 		
-	if Armor == 0:
+	if Armor <= 0:
 		Global.Camera.shaking = true
+		$CollisionShape2D.set_deferred("disabled", true)
 		$AnimatedSprite.play("Explosioxd")
 		can_shoot = false
 	
