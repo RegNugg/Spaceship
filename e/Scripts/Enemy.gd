@@ -17,17 +17,25 @@ func _process(delta):
 	if position.y -16 >= get_viewport_rect().size.y:
 		queue_free()
 	if Armor <= 0:
+		
 		$AnimatedSprite.play("Explosioxd")
 		$CollisionShape2D.set_deferred("disabled", true)
 		Global.Camera.shaking = true
 	pass
 
 func set_armor(new_armor):
+	if new_armor < Armor:
+		Global.EnemyHit.play()
+	
 	Armor = new_armor
-	#if Armor <= 0:
+	
+	if Armor <= 0:
+		Global.Explosion.play()
+		Global.Score_spr.Score += 5
 	#	$CollisionShape2D.set_deferred("disabled", true)
 	#	Global.Camera.shaking = true
 	#	$AnimatedSprite.play("Explosioxd")
+	
 	pass
 
 

@@ -40,11 +40,16 @@ func _on_ShootTimer_timeout():
 	pass
 
 func set_armor(new_armor):
+	if new_armor < Armor:
+		Global.EnemyHit.play()
 	Armor = new_armor
 	if Armor <= 0:
+		Global.Explosion.play()
+		Global.Score_spr.Score += 5
 		$CollisionShape2D.set_deferred("disabled", true)
 		Global.Camera.shaking = true
 		$AnimatedSprite.play("Explosioxd")
+	
 		
  
 	

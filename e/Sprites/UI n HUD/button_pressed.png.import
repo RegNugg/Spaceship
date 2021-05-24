@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/score.png-62fed24b7d62e24d067ab5d4aef5b53d.stex"
+path="res://.import/button_pressed.png-e1ad51cd9fa7c623a553aab4535b2b4f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/UI n HUD/score.png"
-dest_files=[ "res://.import/score.png-62fed24b7d62e24d067ab5d4aef5b53d.stex" ]
+source_file="res://Sprites/UI n HUD/button_pressed.png"
+dest_files=[ "res://.import/button_pressed.png-e1ad51cd9fa7c623a553aab4535b2b4f.stex" ]
 
 [params]
 

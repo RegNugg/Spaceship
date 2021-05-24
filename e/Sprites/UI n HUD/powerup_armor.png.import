@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/score.png-62fed24b7d62e24d067ab5d4aef5b53d.stex"
+path="res://.import/powerup_armor.png-1625c270275b82911abf4a1c15d16ac9.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/UI n HUD/score.png"
-dest_files=[ "res://.import/score.png-62fed24b7d62e24d067ab5d4aef5b53d.stex" ]
+source_file="res://Sprites/UI n HUD/powerup_armor.png"
+dest_files=[ "res://.import/powerup_armor.png-1625c270275b82911abf4a1c15d16ac9.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
