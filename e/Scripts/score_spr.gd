@@ -9,9 +9,7 @@ func set_score(new_score):
 	
 	Score = new_score
 	get_node("Label").set_text(str(Score))
-	
-	if Score > Game.BestScore:
-		Game.BestScore = Score
+
 	
 	pass
 	

@@ -27,6 +27,9 @@ func _process(delta):
 	position.x = clamp(position.x, 0+32, view_size.x - 32)
 	
 	if Armor <= 0:
+		if Global.Score_spr.Score > Game.highscore:
+			Game.highscore = Global.Score_spr.Score
+			Game.carrega_resultat()
 		can_shoot = false
 		CanMove = false
 		Global.Camera.shaking = true

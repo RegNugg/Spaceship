@@ -1,34 +1,23 @@
 extends Node
 
-var Pause = false
-var BestScore = 0
-const filepath = "user://BestScore.data"
-
+var highscore=0
+var puntuacio=0
+var file = File.new()
 
 func _ready():
-	Load_BestScore()
-	
-	pass 
-
-func Load_BestScore():
+	file.open("user://record.guarda", File.READ)
+	highscore=file.get_var()
+	if highscore == null:
+		highscore=0
+var record_file = "user://record.guarda"
+func guarda_resultat():
 	var file = File.new()
-	if not file.file_exists(filepath): return
-	file.open(filepath, File.READ)
-	BestScore = file.get_var()
+	file.open(record_file, File.WRITE)
+	file.store_var(highscore)
 	file.close()
-	pass
-
-func Save_BestScore():
-	var file = BestScore
-	file.open(filepath, File.WRITE)
-	file.store_var(BestScore)
-	file.close()
-	pass
-
-func Set_BestScore(new_score):
-
-	BestScore = new_score
-	Save_BestScore()
-	pass
-	
-
+func carrega_resultat():
+	if file.file_exists(record_file):
+		file.open(record_file,File.READ)
+		highscore=file.get_var()
+		file.close()
+	else: highscore=0
